@@ -16,6 +16,10 @@ jobs:
 
       - name: Extract MAGMITE project
         run: unzip -o "MAGMITE-AI-project-v4.zip.zip" -d project
+      - name: Check project files
+        run: |
+          echo "=== Project structure ==="
+          find project -maxdepth 5 -type f | head -100
 
       - name: Check extracted files
         run: |
