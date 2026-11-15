@@ -20,6 +20,10 @@ jobs:
         run: |
           echo "=== Project structure ==="
           find project -maxdepth 5 -type f | head -100
+      - name: Find Kotlin source files
+        run: |
+          echo "=== Kotlin source files ==="
+          find project -type f -name "*.kt"
 
       - name: Check extracted files
         run: |
