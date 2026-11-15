@@ -24,6 +24,10 @@ jobs:
         run: |
           echo "=== Kotlin source files ==="
           find project -type f -name "*.kt"
+      - name: Show MainActivity code
+        run: |
+          echo "=== MainActivity.kt ==="
+          find project -name "MainActivity.kt" -exec cat {} \;
 
       - name: Check extracted files
         run: |
