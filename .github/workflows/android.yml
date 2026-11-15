@@ -44,6 +44,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
+      - name: Fix MAGMITE greeting commands
+        run: |
+          FILE=$(find project -name "MainActivity.kt" | head -1)
+          sed -i 's/command.contains("hello") || command.contains("hi magmite") ->/command.contains("hello") || command.contains("hi magmite") || command.contains("hey magmite") || command.contains("hey mag white") ->/' "$FILE"
 
       - name: Build Debug APK
         run: |
