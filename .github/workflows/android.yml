@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Extract MAGMITE project
-        run: unzip -o "MAGMITE-AI-project-v3.zip" -d project
+        run: unzip -o "MAGMITE-AI-project-v4.zip.zip" -d project
 
 
       - name: Check extracted files
